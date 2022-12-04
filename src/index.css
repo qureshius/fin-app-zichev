@@ -1,0 +1,73 @@
+:root{
+
+  --indian-Yellow:#D99F4E;
+  --middle-blue-green:#7FE4CC;
+  --candy-pink:#EF6870;
+  --piggy-pink:#FFE4EB;
+  --cultured:#F5F5F5;
+  --palatinate-purple:#501154;
+  --Main-black:#07000B;
+  --white:#fff;
+
+
+
+
+}
+
+
+
+
+
+body {
+  margin: 0;
+  font-family: 'Mulish', sans-serif ;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bg-green{
+  background-color: var(--middle-blue-green) !important;
+}
+
+.bg-gray{
+  background-color: var(--cultured);
+}
+
+.bg-primary{
+  background-color: var(--indian-Yellow) !important;
+}
+
+.bg-pink{
+  background-color: var(--candy-pink) !important;
+}
+.bg-piggy-pink{
+  background-color: var(--piggy-pink) !important;
+}
+.bg-purple{
+  background-color: var(--palatinate-purple) !important;
+}
+
+
+.text-primary{
+  color: var(--indian-Yellow);
+}
+
+.text-purple{
+  color: var(--palatinate-purple);
+}
+  
+
+.custom_button{
+  padding: 0.5rem 4rem !important;
+  color: var(--white) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+}
+
+.custom_button_sm{
+  padding: 0.5rem 2rem !important;
+  color: var(--white) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+}
+
