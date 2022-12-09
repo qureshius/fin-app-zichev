@@ -21,32 +21,29 @@ const ProfileClientList = () => {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }} >
-      <Grid container spacing={{ xs: 2, md: 4, width: '100%' }} >
-        <Grid item xs={12} md={12} lg={12} sx={{ borderRadius: '0.625rem' }}>
-          <Grid lg={12} sx={{ width: '100%', bgcolor: 'background.paper', borderRadius: '0.625rem', paddingBottom: '0.25rem' }}>
+    <section>
+      <div className='w-full rounded-xl bg-white pb-1'>
             {[1, 2].map(() => {
               return (
                 <>
-                  <Grid sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '2rem 2.25rem 1rem 2.25rem' }}>
-                    <Grid>
-                      <Grid sx={{ display: 'flex', alignItems: 'center' }} >
-                        <Avatar sx={{ height: '3.125rem', width: '3.125rem' }} alt="Remy Sharp" src="/images/profileimage.svg" />
-                        <Grid sx={{ display: 'flex', flexDirection: 'column', pl: '0.75rem' }}>
-                          <Grid sx={{ display: 'flex', alignItems: 'center' }}>
-                            <Typography variant="body1" sx={{ fontWeight: 'bold' }} >
+                  <div className='flex items-center justify-between px-9 pt-9 pb-4'>
+
+                      <div className='flex items-center'>
+                        <Avatar className='h-12 w-15' alt="Remy Sharp" src="/images/profileimage.svg" />
+                        <div className='flex flex-col pl-3'>
+                          <div className='flex items-center'>
+                            <p className='h6'>
                               Kare Kertz
-                            </Typography>
-                            <Typography sx={{ pl: '0.688rem', fontSize: '0.625rem', fontWeight: '300' }} >(She, her)</Typography>
-                          </Grid>
-                          <Grid>
+                            </p>
+                            <p className='pl-2 text-xs font-light	' sx={{ pl: '0.688rem', fontSize: '0.625rem', fontWeight: '300' }} >(She, her)</p>
+                          </div>
+                          <div>
                             <CustomChip title={'Life Insurance'} className={'bg-green'} />
                             <CustomChip title={'Disability Advisor'} sx={{ color: '#fff', ml: '0.5rem' }} className={'bg-pink'} />
-                          </Grid>
-                        </Grid>
-                      </Grid>
-                    </Grid>
-                    <Grid>
+                          </div>
+                        </div>
+                      </div>
+                    <div>
                       <Button className="bg-primary custom_button_sm" sx={{ fontSize: '0.75rem', }}>View Profile</Button>
                       <IconButton onClick={handleClick}>
                         <MoreVertIcon />
@@ -66,16 +63,14 @@ const ProfileClientList = () => {
                           </MenuItem>
                         ))}
                       </Menu>
-                    </Grid>
-                  </Grid>
-                  <Divider sx={{ borderBottom: '1px solid #FFE4EB', width: '92%', margin: 'auto' }} />
+                    </div>
+                  </div>
+                  <Divider className='custom-bottom-border'/>
                 </>
               )
             })}
-          </Grid>
-        </Grid>
-      </Grid>
-    </Box>
+      </div>
+    </section>
   );
 }
 
