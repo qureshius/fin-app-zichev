@@ -1,108 +1,105 @@
 import { Box, Button, Grid, Typography } from '@mui/material';
 import React from 'react';
 import CustomChip from '../../customChip/CustomChip';
+import Image from 'next/image'
 
 
 const ProfileInfo = () => {
   return (
-    <Box sx={{ flexGrow: 1 }} >
-      <Grid container sx={{ py: '2.1rem', pr: '2.125rem', pl: '2.75rem', backgroundColor: '#fff', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' , borderRadius: '0.625rem' }}>
-        <Grid item xs={12} md={12} lg={12}>
-          <Grid sx={{ display: 'flex', alignItems: 'start' }}>
-            <img src="/images/profileimage.svg" sx={{ height: '5rem', width: '5rem' }} alt="profile image" />
-            <Grid sx={{ pl: '1.75rem' }}>
-              <Grid sx={{ display: 'flex', alignItems: 'center' }} >
-                <Typography variant="body1" sx={{ fontWeight: 'bold', lineHeight: '1.688rem' }} >
+    <>
+      <section>
+        <div className='py-9 pr-9 pl-11 bg-white rounded-xl shadow-lg'>
+          <div className='flex items-start'>
+            <Image src="/images/profileimage.svg" className='h-20 w-20' alt="profile image" width={80} height={80} />
+            <div className='pl-7'>
+              <div className='flex items-center'>
+                <h6 className='h6'>
                   Kare Kertz
-                </Typography>
-                <Typography sx={{ pl: '0.688rem', fontSize: '0.625rem', fontWeight: '300' }} >(She, her)</Typography>
-              </Grid>
-              <Grid container sx={{ display: 'flex', alignItems: 'center' }}>
-                <img src='/images/map-pin.svg' alt="map location" class="img-fluid rounded-top" />
-                <Typography sx={{ display: 'flex', alignItems: 'center', ml: '0.25rem', lineHeight: '1.313rem' }} >
+                </h6>
+                <p className='pl-3 font-xs font-light	'>(She, her)</p>
+              </div>
+              <div className='flex items-center'>
+                <Image src='/images/map-pin.svg' alt="map location" className="img-fluid rounded-top" width={15} height={16} />
+                <p className='ml-1 text-heading'>
                   Ontartio, Canada
-                </Typography>
-              </Grid>
-              <Typography sx={{ fontSize: '0.75rem', fontWeight: '400', lineHeight: '1.313rem' }}>
+                </p>
+              </div>
+              <p className='text-description'>
                 Carleton University
-              </Typography>
-            </Grid>
-          </Grid>
+              </p>
+            </div>
+          </div>
 
-          <Grid sx={{ pt: '1.5rem', display: 'flex', justifyContent: 'space-evenly' }}  >
-            <Grid sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'  }}>
-              <Typography >
+          <div className='pt-6 flex justify-evenly'>
+            <div className='flex flex-col items-center justify-center'>
+              <p className='text-heading' >
                 5 +
-              </Typography>
-              <Typography >
+              </p>
+              <p className='text-heading' >
                 Clients
-              </Typography>
-            </Grid>
-            <Grid sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'  }}>
-              
-                <Typography >
-                  120 +
-                </Typography>
-                <Typography >
-                  Clients
-                </Typography>
-         
-            </Grid>
-            <Grid sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'  }}>
-              <Typography >
+              </p>
+            </div>
+            <div className='flex flex-col items-center justify-center'>
+
+              <p className='text-heading'>
+                120 +
+              </p>
+              <p className='text-heading'>
+                Clients
+              </p>
+
+            </div>
+            <div className='flex flex-col items-center justify-center'>
+              <p className='text-heading' >
                 8 years
-              </Typography>
-              <Typography >
+              </p>
+              <p className='text-heading' >
                 Experience
-              </Typography>
-            </Grid>
-          </Grid>
+              </p>
+            </div>
+          </div>
 
-
-          <Grid sx={{ pt: '1.5rem' }}>
-            <Typography sx={{ fontSize: '0.75rem', fontWeight: '800', lineHeight: '1.313rem' }}>
+          <div className='pt-4'>
+            <p className='text-sub-heading'>
               About me:
-            </Typography>
-            <Typography sx={{ fontSize: '0.75rem', fontWeight: '400', pt: '0.5rem', lineHeight: '1.313rem' }}>
+            </p>
+            <p className='text-description pt-2'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim tellus dignissim sodales feugiat. Orci est congue lacus mi lacus ut cras amet elementum. Sit odio aliquam nisl, sed. Eu, feugiat aliquet interdum sagittis, consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim tellus dignissim sodales feugiat. Orci est congue lacus mi lacus ut cras amet elementum. Sit odio aliquam nisl, sed. Eu, feugiat aliquet interdum sagittis, consequat.
-            </Typography>
-          </Grid>
+            </p>
+          </div>
 
-          <Grid sx={{ pt: '0.5rem' }}>
-            <Typography sx={{ fontSize: '0.75rem', fontWeight: '800', lineHeight: '1.313rem' }}>
+          <div className='pt-4'>
+            <p className='text-sub-heading'>
               Industry Experience
-            </Typography>
-            <Typography sx={{ fontSize: '0.75rem', fontWeight: '400', pt: '0.5rem', lineHeight: '1.313rem' }}>
+            </p>
+            <p className='text-description pt-2'>
               CFP   RICP   EA
-            </Typography>
-          </Grid>
+            </p>
+          </div>
 
-          <Grid>
-            <Typography sx={{ fontSize: '0.75rem', fontWeight: '700', py: '0.5rem', lineHeight: '1.313rem' }} >
+          <div>
+            <p className='text-sub-heading pt-4 pb-2'>
               Specialties
-            </Typography>
-            <CustomChip title={'Life Insurance'} className={'bg-green'}/>
-            <CustomChip title={'Disability Advisor'} sx = {{color: '#fff', ml: '0.5rem'}} className={'bg-pink'} />
-          </Grid>
+            </p>
+            <CustomChip title={'Life Insurance'} className={'bg-green'} />
+            <CustomChip title={'Disability Advisor'} sx={{ color: '#fff', ml: '0.5rem' }} className={'bg-pink'} />
+          </div>
 
-          <Grid>
-            <Typography sx={{ fontSize: '0.75rem', fontWeight: '700', py: '0.5rem', lineHeight: '1.313rem' }}>
+          <div className='pt-4'>
+            <p className='text-sub-heading py-2'>
               Languages
-            </Typography>
-            <CustomChip title={"English"} className={'bg-piggy-pink'} sx={{lineHeight: '0.938rem'}}/>
-            <CustomChip title={"French"} className={'bg-piggy-pink'} sx={{ml: '0.5rem', lineHeight: '0.938rem'}}/>
-            <CustomChip title={"Latin"} className={'bg-piggy-pink'} sx={{ml: '0.5rem', lineHeight: '0.938rem'}}/>
-          </Grid>
-
-          <Grid sx={{ pt: '1.75rem', display: 'flex', justifyContent: 'center' }}>
+            </p>
+            <CustomChip title={"English"} className={'bg-piggy-pink leading-3	'} />
+            <CustomChip title={"French"} className={'bg-piggy-pink ml-2 leading-3'} />
+            <CustomChip title={"Latin"} className={'bg-piggy-pink ml-2 leading-3'} />
+          </div>
+          <div className='flex justify-center pt-7'>
             <Button className="bg-primary custom_button">Send Message</Button>
-          </Grid>
-
-        </Grid>
-      </Grid>
-    </Box>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
-
 
 export default ProfileInfo;

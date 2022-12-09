@@ -3,7 +3,7 @@ import React from 'react';
 
 const CustomDropDown = (props) => {
     return (
-        <Grid item xs={5} >
+        <div className='grid gridl-cols-9 px-6'>
             <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">{props?.inputLabel}</InputLabel>
                 <Select
@@ -16,7 +16,7 @@ const CustomDropDown = (props) => {
                     <MenuItem value={30}>Thirty</MenuItem>
                 </Select>
             </FormControl>
-        </Grid>
+        </div>
     );
 }
 

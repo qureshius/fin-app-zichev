@@ -1,16 +1,14 @@
-import { Grid } from '@mui/material';
 import React from 'react';
 import HeaderComponent from './headercomponent/HeaderComponent';
 import MainCard from './maincard/MainCard';
-import './maincard/homewrapper.css';
 
 const HomeWrapper = () => {
     return (
        <div className='bg-gray'>
-            <Grid className='content_wrapper'>
+            <div className='pt-8 pr-16 pb-16 pl-20'>
                 <HeaderComponent />
                 <MainCard />
-            </Grid>
+            </div>
        </div>
     );
 }
